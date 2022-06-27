@@ -1,5 +1,8 @@
 # FUNCIONES DE ORDEN SUPERIOR
 
+from socket import ALG_SET_AEAD_ASSOCLEN
+
+
 suma = lambda x: x+100
 suma(20)
 
@@ -109,3 +112,14 @@ f.close()
 # Ejercicio 6: Rescatar datos
 
 # Cree un algoritmo para volver al diccionario original desde el archivo personas.txt creado en el ejercicio anterior. El nombre se tiene que recuperar en mayúsculas y cada valor debe volver a ser del tipo entero. El diccionario tendría que volver a verse como: 
+personas={}
+f=open("personas.txt","r")
+
+temp=f.readline().strip().split(" - ")
+personas[temp[0]]=int(temp[1])
+print(personas)
+print(personas.split(" - "))
+
+pepe=f.readlines()
+
+ALG_SET_AEAD_ASSOCLEN
